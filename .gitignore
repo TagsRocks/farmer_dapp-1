@@ -1,3 +1,6 @@
 .DS*
 *chaindata*
 *ethash*
+farmer_dapp_ios/*
+*node_modules*
+truffle/explorer/*
