@@ -88,3 +88,5 @@ admin.nodeInfo
 admin.peers
 admin.nodeInfo
 admin.peers
+admin.nodeInfo
+admin.peers
