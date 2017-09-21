@@ -1,3 +1,5 @@
+# Farmer Dapp
+# Set up
 ## Remove old blockchain (if it exists...) : datadir default location:
 '''
 Mac: ~/Library/Ethereum
@@ -46,7 +48,6 @@ geth init <genesis_file.json>
 ## Create an account
 geth account new
 
-
 ## Set Up Static Nodes
 '''
 Geth supports a feature called static nodes if you have certain peers you always want to connect to. Static nodes are re-connected on disconnects. You can configure permanent static nodes by putting something like the following into <datadir>/static-nodes.json (this should be the same folder that the chaindata and keystore folders are in)
@@ -65,11 +66,44 @@ geth --nodiscover --port 4242 --maxpeers 2 --networkid 4242 --rpc --rpccorsdomai
 ## geth console commands
 # my info
 > admin.nodeInfo
+# my accounts
+> personal.listAccounts
 # peers info
 > admin.peers
 # adding temporary peers (runtime only)
 > admin.admin.addPeer("enode://cb32b5f9b4f6799cd728747d1fa55485758d0f1a0510acb02c6696915d0721b1ed16103cf80fd77942bc7e5dde1bc79b5b5618ff383eb2423b6106dd0cf184ce@10.65.34.114:4242")
+# unblocking account
+> personal.unlockAccount(web3.eth.coinbase, "password", 15000)
 
-## truffle and etherparty
+# Truffle
+## Truffle project info
+"
+./contracts: Contains the Solidity source files for our smart contracts. There is an important contract in here called Migrations.sol, which we'll talk about later. Be sure not to delete this file!
+./migrations: Truffle uses a migration system to handle smart contract deployments. A migration is an additional special smart contract that keeps track of changes.
+./test: Contains both JavaScript and Solidity tests for our smart contracts.
+./truffle.js: Truffle's configuration file.
+"
+## Start an empty project
+> truffle init bare
+## Start an example project
+> truffle unbox pet-shop
+## Start a project
+> truffle init
+## Compile contracts n ./contracts
+> truffle compile
+## Migrate those contracts to the Blockchain, fill in ./migration/2_ file
+> truffle migrate
+## Test the contracts in Solidity or JS
+> truffle test
+
+
+
+
+
+
+# References
+https://github.com/ethereum/go-ethereum/wiki/Managing-your-accounts
+https://github.com/trufflesuite/truffle
+
 http://truffleframework.com/tutorials/pet-shop
-https://www.codeooze.com/blockchain/ethereum-truffle-hello-world/
+https://www.codeooze.com/blockchain/ethereum-geth-private-blockchain/#troubleshooting
