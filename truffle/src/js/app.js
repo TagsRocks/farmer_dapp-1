@@ -3,20 +3,20 @@ App = {
     contracts: {},
 
     init: function() {
-        // Load pets.
+        // Load veggies.
         $.getJSON('../veggies.json', function(data) {
-            var petsRow = $('#petsRow');
-            var petTemplate = $('#petTemplate');
+            var veggiesRow = $('#veggiesRow');
+            var veggieTemplate = $('#veggieTemplate');
 
             for (i = 0; i < data.length; i ++) {
-                petTemplate.find('.panel-title').text(data[i].name);
-                petTemplate.find('img').attr('src', data[i].picture);
-                petTemplate.find('.pet-breed').text(data[i].breed);
-                petTemplate.find('.pet-age').text(data[i].age);
-                petTemplate.find('.pet-location').text(data[i].location);
-                petTemplate.find('.btn-adopt').attr('data-id', data[i].id);
+                veggieTemplate.find('.panel-title').text(data[i].name);
+                veggieTemplate.find('img').attr('src', data[i].picture);
+                veggieTemplate.find('.veggie-breed').text(data[i].breed);
+                veggieTemplate.find('.veggie-cost').text(data[i].cost);
+                veggieTemplate.find('.veggie-origin').text(data[i].origin);
+                veggieTemplate.find('.btn-buy').attr('data-id', data[i].id);
 
-                petsRow.append(petTemplate.html());
+                veggiesRow.append(veggieTemplate.html());
             }
         });
 
@@ -51,7 +51,7 @@ App = {
             // Set the provider for our contract.
             App.contracts.Adoption.setProvider(App.web3Provider);
 
-            // Use our contract to retieve and mark the adopted pets.
+            // Use our contract to retieve and mark the adopted veggies.
             return App.markAdopted();
         });
 
@@ -59,13 +59,13 @@ App = {
     },
 
     bindEvents: function() {
-        $(document).on('click', '.btn-adopt', App.handleAdopt);
+        $(document).on('click', '.btn-buy', App.handleAdopt);
     },
 
     handleAdopt: function() {
         event.preventDefault();
 
-        var petId = parseInt($(event.target).data('id'));
+        var veggieId = parseInt($(event.target).data('id'));
 
         var adoptionInstance;
 
@@ -79,7 +79,7 @@ App = {
             App.contracts.Adoption.deployed().then(function(instance) {
                 adoptionInstance = instance;
 
-                return adoptionInstance.adopt(petId, {from: account});
+                return adoptionInstance.adopt(veggieId, {from: account});
             }).then(function(result) {
                 return App.markAdopted();
             }).catch(function(err) {
@@ -98,7 +98,7 @@ App = {
         }).then(function(adopters) {
             for (i = 0; i < adopters.length; i++) {
                 if (adopters[i] !== '0x0000000000000000000000000000000000000000') {
-                    $('.panel-pet').eq(i).find('button').text('Pending...').attr('disabled', true);
+                    $('.panel-veggie').eq(i).find('button').text('Pending...').attr('disabled', true);
                 }
             }
         }).catch(function(err) {
