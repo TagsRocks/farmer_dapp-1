@@ -1,42 +1,66 @@
 [
-  {
-    "id": 0,
-    "name": "Carrot",
-    "picture": "images/carrot.jpg",
-    "age": 2,
-    "breed": "Daucus carota",
-    "location": "France"
-  },
-  {
-    "id": 1,
-    "name": "Melon",
-    "picture": "images/melon.jpg",
-    "age": 3,
-    "breed": "Cucumis melo",
-    "location": "France"
-  },
-  {
-    "id": 2,
-    "name": "Eggplant",
-    "picture": "images/eggplant.jpg",
-    "age": 2,
-    "breed": "Solanum melongena",
-    "location": "Italia"
-  },
-  {
-    "id": 3,
-    "name": "Lettuce",
-    "picture": "images/lettuce.jpg",
-    "age": 2,
-    "breed": "Lactuca sativa",
-    "location": "France"
-  },
-  {
-    "id": 4,
-    "name": "Cabbage",
-    "picture": "images/cabbage.jpg",
-    "age": 1,
-    "breed": "Brassica oleracea",
-    "location": "France"
-  }
+    {
+        "id": 0,
+        "name": "Carrot",
+        "picture": "images/carrot.jpg",
+        "age": 2,
+        "breed": "Daucus carota",
+        "location": "France"
+    },
+    {
+        "id": 1,
+        "name": "Melon",
+        "picture": "images/melon.jpg",
+        "age": 3,
+        "breed": "Cucumis melo",
+        "location": "France"
+    },
+    {
+        "id": 2,
+        "name": "Eggplant",
+        "picture": "images/eggplant.jpg",
+        "age": 2,
+        "breed": "Solanum melongena",
+        "location": "Italia"
+    },
+    {
+        "id": 3,
+        "name": "Lettuce",
+        "picture": "images/lettuce.jpg",
+        "age": 2,
+        "breed": "Lactuca sativa",
+        "location": "France"
+    },
+    {
+        "id": 4,
+        "name": "Cabbage",
+        "picture": "images/cabbage.jpg",
+        "age": 1,
+        "breed": "Brassica oleracea",
+        "location": "España"
+    },
+    {
+        "id": 5,
+        "name": "Cucumber",
+        "picture": "images/cucumber.png",
+        "age": 1,
+        "breed": "Cucumis sativus",
+        "location": "中国"
+    },
+    {
+        "id": 6,
+        "name": "Garlic",
+        "picture": "images/garlic.jpg",
+        "age": 1,
+        "breed": "Allium sativum",
+        "location": "France"
+    },
+    {
+        "id": 6,
+        "name": "Onion",
+        "picture": "images/onion.jpg",
+        "age": 1,
+        "breed": "Allium cepa",
+        "location": "St Roman"
+    }
 ]
