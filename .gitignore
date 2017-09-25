@@ -4,3 +4,4 @@
 farmer_dapp_ios/*
 *node_modules*
 truffle/explorer/*
+eth-netstats*
