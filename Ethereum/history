@@ -91,3 +91,9 @@ admin.peers
 admin.nodeInfo
 admin.peers
 admin.nodeInfo
+personal.listAccounts()
+personal.listAccounts
+web3.eth.coinbase
+admin.peers
+ll
+admin.peers

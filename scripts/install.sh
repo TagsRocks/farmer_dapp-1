@@ -4,7 +4,6 @@
 '''
 Mac: ~/Library/Ethereum
 Linux: ~/.ethereum
-Windows: %APPDATA%\Ethereum
 '''
 
 ## Set symlink if working in another dir
