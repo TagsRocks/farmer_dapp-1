@@ -1,0 +1,49 @@
+
+<div ng-if="product.name!='小米手机5'">
+    <div  ng-include="'view/404.html'"></div>
+</div>
+
+<div ng-if="product.name=='小米手机5'" class="product_bd" ng-switch="product.detail.name">
+    <div ng-switch-when="概述">
+        <div class="product_description">
+            <div class="description_text">
+                <h1>小米手机5</h1>
+                <h2>十余项黑科技，很轻狠快</h2>
+                <p>骁龙820处理器，最大可选 4GB 内存 + 128GB 闪存
+                    <br/>4 轴防抖相机，3D陶瓷 / 玻璃机身
+                </p>
+                <p class="price">1999 <span>元起</span></p>
+            </div>
+            <img src="resource/img/mi5/h-12.jpg" alt=""/>
+        </div>
+
+        <div class="product_description">
+            <div class="description_text">
+                <h1>小米手机5</h1>
+                <h2>十余项黑科技，很轻狠快</h2>
+                <p>骁龙820处理器，最大可选 4GB 内存 + 128GB 闪存
+                    <br/>4 轴防抖相机，3D陶瓷 / 玻璃机身
+                </p>
+                <p class="price">1999 <span>元起</span></p>
+            </div>
+            <img src="resource/img/mi5/h-13.jpg" alt=""/>
+        </div>
+    </div>
+
+    <div ng-switch-when="黑科技">
+        <div ng-include="'view/page/template/hei.html'"></div>
+    </div>
+
+    <div ng-switch-when="相机">
+        <div  ng-include="'view/page/template/camera.html'"></div>
+    </div>
+
+    <div ng-switch-when="屏幕">
+        <div  ng-include="'view/page/template/screen.html'"></div>
+    </div>
+
+    <div ng-switch-default>
+        <div  ng-include="'view/404.html'"></div>
+    </div>
+
+</div>

@@ -9,7 +9,7 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
+	<link rel="stylesheet" href="css/home.css"/>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -17,7 +17,27 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+	<div class="topbar">
+	    <div class="container">
+		<div class="topbar_nav fl">
+		    <ul>
+			<li><a ui-sref="index.html">Home</a></li>
+			<li><a ui-sref="error404">Today's Deals</a></li>
+			<li><a ui-sref="error404">Gift</a></li>
+		    </ul>
+		</div>
+		<div class="topbar_cart fr">
+			<ul>
+			<li><a ui-sref="cart" href="#/cart">Basket</a></li>		   
+			<li><a ui-sref="login" href="#/login">login </a></li>
+ 			<li><a ui-sref="register" href="#/register">register</a></li>
+			</ul>      
+		</div>
+
+	    </div>
+	</div>
   <body>
+
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-8 col-sm-push-2">
