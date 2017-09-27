@@ -1,0 +1,27 @@
+
+
+/*footer  footer_link*/
+.footer_link{
+    padding: 60px 0;
+}
+.footer_link dl{
+        position: relative;
+    left:20%;
+    float: left;
+    width: 160px;
+    height: 112px;
+    margin: 0;
+}
+.footer_link dt{
+    margin: -1px 0 26px;
+    font-size: 14px;
+    line-height: 1.25;
+    color: #424242;
+}
+.footer_link dd{
+    margin: 10px 0 0;
+    font-size: 12px;
+}
+
+
+/***** footer  end*/

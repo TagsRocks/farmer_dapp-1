@@ -1,0 +1,7 @@
+ [
+    {"src": "resource/img/1.jpg", "productId": 12},
+    {"src": "resource/img/2.jpg", "productId": 1},
+    {"src": "resource/img/3.jpg", "productId": 5},
+    {"src": "resource/img/4.jpg", "productId": 2},
+    {"src": "resource/img/5.jpg", "productId": 10}
+  ]
