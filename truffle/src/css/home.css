@@ -48,17 +48,79 @@
     color: #ff6700;
     background: #fff;
 }
+
+
 /*home menu start*/
-.site_head {
+.logoBar{
+    height:120px;
+    background-color:#567;
+}
+.site_logo{
     position: relative;
     float : left;
     z-index: 40;
     height: 120px;
     top:10px;
 }
+/*search*/
+.search_box{
+    width:430px;
+    padding-top:35px;
+    padding-left:385px;
+}
+.search_text{
+    width:350px;
+    height:35px;
+    line-height:35px;
+    padding:0 5px;
+    background-color:#FFF;
+}
+.search_btn{
+    width:70px;
+    height:35px;position:
+    relative;top:-35px;
+    font-size:14px;
+    left:770%;
+    font-family:"Microsoft YaHei", "微软雅黑";
+    background-color:#FF8C00; color:#FFF;
+}
 .site_title {
     position: relative;
-    height: 120px;
-    top:30px;
+    height: 100px;
+    top:10px;
 }
 /*home menu end*/
+
+/*vegetables start*/
+
+.veges {
+    position: relative;
+    height: 100px;
+    top:-50px;
+}
+
+/*footer  footer_link*/
+.footer_link{
+    position: relative;
+    top:30px;
+    padding: 60px 0;
+}
+.footer_link dl{
+        position: relative;
+    left:20%;
+    float: left;
+    width: 160px;
+    height: 112px;
+    margin: 0;
+}
+.footer_link dt{
+    margin: -1px 0 26px;
+    font-size: 14px;
+    line-height: 1.25;
+    color: #424242;
+}
+.footer_link dd{
+    margin: 10px 0 0;
+    font-size: 12px;
+}
+/***** footer  end*/

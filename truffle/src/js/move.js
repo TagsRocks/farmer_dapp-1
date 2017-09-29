@@ -84,4 +84,4 @@ var box  = document.getElementById("all");  //   获得大盒子
                     clearInterval(obj.timer);
                 }
             },10);
-        }
+}
