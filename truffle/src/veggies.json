@@ -1,66 +1,66 @@
 [
     {
         "id": 0,
-        "name": "Carrot",
-        "picture": "images/carrot.jpg",
-        "cost": 2,
-        "breed": "Daucus carota",
-        "origin": "France"
+        "name": "htc",
+        "picture": "images/phone_htc.jpg",
+        "cost": 200,
+        "breed": "HTC",
+        "origin": "USA"
     },
     {
         "id": 1,
-        "name": "Melon",
-        "picture": "images/melon.jpg",
-        "cost": 3,
-        "breed": "Cucumis melo",
-        "origin": "France"
+        "name": "Huawei",
+        "picture": "images/phone_huawei.jpg",
+        "cost": 300,
+        "breed": "Huawei",
+        "origin": "China"
     },
     {
         "id": 2,
-        "name": "Eggplant",
-        "picture": "images/eggplant.jpg",
-        "cost": 2,
-        "breed": "Solanum melongena",
-        "origin": "Italia"
+        "name": "iPhone 8",
+        "picture": "images/phone_iphone.jpg",
+        "cost": 1000,
+        "breed": "Apple",
+        "origin": "USA"
     },
     {
         "id": 3,
-        "name": "Lettuce",
-        "picture": "images/lettuce.jpg",
-        "cost": 2,
-        "breed": "Lactuca sativa",
-        "origin": "France"
+        "name": "Mi 6",
+        "picture": "images/phone_mi.jpg",
+        "cost": 400,
+        "breed": "XiaoMi",
+        "origin": "China"
     },
     {
         "id": 4,
-        "name": "Cabbage",
-        "picture": "images/cabbage.jpg",
-        "cost": 1,
-        "breed": "Brassica oleracea",
-        "origin": "España"
+        "name": "Nokia",
+        "picture": "images/phone_nokia.jpg",
+        "cost": 10,
+        "breed": "Nokia",
+        "origin": "Japan"
     },
     {
         "id": 5,
-        "name": "Cucumber",
-        "picture": "images/cucumber.png",
-        "cost": 1,
-        "breed": "Cucumis sativus",
-        "origin": "中国"
+        "name": "Samsung",
+        "picture": "images/phone_samsung.jpg",
+        "cost": 600,
+        "breed": "Samsung",
+        "origin": "Corea"
     },
     {
         "id": 6,
-        "name": "Garlic",
-        "picture": "images/garlic.jpg",
-        "cost": 1,
-        "breed": "Allium sativum",
-        "origin": "France"
+        "name": "Sony",
+        "picture": "images/phone_sony.jpg",
+        "cost": 500,
+        "breed": "Sony",
+        "origin": "Japan"
     },
     {
         "id": 6,
-        "name": "Onion",
-        "picture": "images/onion.jpg",
-        "cost": 1,
-        "breed": "Allium cepa",
-        "origin": "St Roman"
+        "name": "ZTE",
+        "picture": "images/phone_zte.jpg",
+        "cost": 300,
+        "breed": "ZTE",
+        "origin": "China"
     }
 ]

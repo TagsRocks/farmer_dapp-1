@@ -130,6 +130,7 @@ $> truffle test
 ## References
 * https://github.com/ethereum/go-ethereum/wiki/Managing-your-accounts
 * https://github.com/trufflesuite/truffle
+* https://github.com/ethereum/go-ethereum/wiki/Setting-up-monitoring-on-local-cluster
 
 * http://truffleframework.com/tutorials/pet-shop
 * https://www.codeooze.com/blockchain/ethereum-geth-private-blockchain/#troubleshooting
