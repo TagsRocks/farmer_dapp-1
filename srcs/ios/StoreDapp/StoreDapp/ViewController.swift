@@ -14,20 +14,19 @@ class MainViewController: UIViewController
     let walletView = BoxView(givenId:"wallet")
     let scanView = BoxView(givenId:"scan")
     let transferView = BoxView(givenId:"transfers")
-    let back = UIImageView(image: UIImage(named: "back"))
+    let backButton = UIImageView(image: UIImage(named: "back"))
     let piggybank = UIImageView(image: UIImage(named: "piggybank"))
     let scan = UIImageView(image: UIImage(named: "scan"))
     let transactions = UIImageView(image: UIImage(named: "transactions"))
     public var currentView = "welcome"
-    
-     convenience init(){
-        self.init(nibName: nil, bundle: nil)
 
+     convenience init()
+     {
+        self.init(nibName: nil, bundle: nil)
         walletView.delegate = self
         scanView.delegate = self
         transferView.delegate = self
     }
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -35,17 +34,33 @@ class MainViewController: UIViewController
         self.view.addSubview(walletView)
         self.view.addSubview(scanView)
         self.view.addSubview(transferView)
-        self.view.addSubview(back)
+        self.view.addSubview(backButton)
         walletView.addSubview(piggybank)
         scanView.addSubview(scan)
         transferView.addSubview(transactions)
-
+        
+        self.initBackButton()
         self.refreshView()
     }
-    
+    @objc func handleTap(sender: UITapGestureRecognizer? = nil)
+    {
+        currentView = "welcome back"
+        refreshView()
+    }
+    func initBackButton()
+    {
+        backButton.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(sender:)));
+        backButton.addGestureRecognizer(tapGesture)
+        backButton.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(10)
+            make.left.equalTo(0)
+            make.height.equalTo(60)
+            make.width.equalTo(60)}
+    }
     private func clearall()
     {
-        back.isHidden = true
+        backButton.isHidden = true
         transactions.isHidden = true
         piggybank.isHidden = true
         scan.isHidden = true
@@ -88,33 +103,27 @@ class MainViewController: UIViewController
     }
     private func walletPage()
     {
-        back.snp.remakeConstraints { (make) -> Void in
-            make.top.left.equalTo(0)}
         walletView.snp.remakeConstraints { (make) -> Void in
             make.top.left.right.bottom.equalTo(0)}
         clearall()
-        back.isHidden = false
+        backButton.isHidden = false
         walletView.isHidden = false
     }
     private func scanPage()
     {
-        back.snp.remakeConstraints { (make) -> Void in
-            make.top.left.equalTo(0)}
         scanView.snp.remakeConstraints { (make) -> Void in
             make.top.left.right.bottom.equalTo(0)}
         clearall()
         scanView.isHidden = false
-        back.isHidden = false
+        backButton.isHidden = false
     }
     private func transferPage()
     {
-        back.snp.remakeConstraints { (make) -> Void in
-            make.top.left.equalTo(0)}
         transferView.snp.remakeConstraints { (make) -> Void in
             make.top.left.right.bottom.equalTo(0)}
         clearall()
         transferView.isHidden = false
-        back.isHidden = false
+        backButton.isHidden = false
     }
 
     func refreshView()
@@ -122,7 +131,8 @@ class MainViewController: UIViewController
         walletView.backgroundColor = UIColor.gray
         scanView.backgroundColor = UIColor.darkGray
         transferView.backgroundColor = UIColor.lightGray
-        UIView.animate(withDuration: 5){
+        UIView.animate(withDuration: 0.5)
+        {
             switch self.currentView {
             case "wallet":
                 self.walletPage()

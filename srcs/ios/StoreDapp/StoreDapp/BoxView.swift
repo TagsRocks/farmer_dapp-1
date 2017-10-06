@@ -28,9 +28,8 @@ class BoxView: UIView, UIGestureRecognizerDelegate
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)));
         self.addGestureRecognizer(tapGesture)
     }
-    @objc func handleTap(sender: UITapGestureRecognizer? = nil )
+    @objc func handleTap(sender: UITapGestureRecognizer? = nil)
     {
-        self.backgroundColor = UIColor.white
         self.delegate!.currentView = self.id!
         self.delegate?.refreshView()
     }
