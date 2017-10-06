@@ -11,21 +11,18 @@ import SnapKit
 
 class MainViewController: UIViewController
 {
-    let walletView = BoxView(givenId:"wallet")
-    let scanView = BoxView(givenId:"scan")
-    let transferView = BoxView(givenId:"transfers")
+    let walletView = Wallet()
+    let scanView = Scan()
+    let transactionsView = Transactions()
     let backButton = UIImageView(image: UIImage(named: "back"))
-    let piggybank = UIImageView(image: UIImage(named: "piggybank"))
-    let scan = UIImageView(image: UIImage(named: "scan"))
-    let transactions = UIImageView(image: UIImage(named: "transactions"))
-    public var currentView = "welcome"
+    public var currentView: BoxView? = nil
 
-     convenience init()
-     {
+    convenience init()
+    {
         self.init(nibName: nil, bundle: nil)
         walletView.delegate = self
         scanView.delegate = self
-        transferView.delegate = self
+        transactionsView.delegate = self
     }
     override func viewDidLoad()
     {
@@ -33,22 +30,15 @@ class MainViewController: UIViewController
 
         self.view.addSubview(walletView)
         self.view.addSubview(scanView)
-        self.view.addSubview(transferView)
+        self.view.addSubview(transactionsView)
         self.view.addSubview(backButton)
-        walletView.addSubview(piggybank)
-        scanView.addSubview(scan)
-        transferView.addSubview(transactions)
-        
+
         self.initBackButton()
-        self.refreshView()
-    }
-    @objc func handleTap(sender: UITapGestureRecognizer? = nil)
-    {
-        currentView = "welcome back"
-        refreshView()
+        self.welcomePage()
     }
     func initBackButton()
     {
+        backButton.layer.zPosition = CGFloat.greatestFiniteMagnitude - 1
         backButton.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(sender:)));
         backButton.addGestureRecognizer(tapGesture)
@@ -58,91 +48,39 @@ class MainViewController: UIViewController
             make.height.equalTo(60)
             make.width.equalTo(60)}
     }
-    private func clearall()
+    @objc func handleTap(sender: UITapGestureRecognizer? = nil)
     {
-        backButton.isHidden = true
-        transactions.isHidden = true
-        piggybank.isHidden = true
-        scan.isHidden = true
-        walletView.isHidden = true
-        scanView.isHidden = true
-        transferView.isHidden = true
+        currentView = nil
+        refreshView()
     }
-    private func welcomePage()
-    {
-        walletView.snp.remakeConstraints { (make) -> Void in
-            make.top.left.right.equalTo(0)
-            make.height.equalTo(self.view.snp.height).multipliedBy(0.5)}
-        scanView.snp.remakeConstraints { (make) -> Void in
-            make.left.bottom.equalTo(0)
-            make.height.equalTo(self.view.snp.height).multipliedBy(0.5)
-            make.width.equalTo(self.view.snp.width).multipliedBy(0.5)}
-        transferView.snp.remakeConstraints { (make) -> Void in
-            make.right.bottom.equalTo(0)
-            make.width.equalTo(self.view.snp.width).multipliedBy(0.5)
-            make.height.equalTo(self.view.snp.height).multipliedBy(0.5)}
-        piggybank.snp.remakeConstraints { (make) -> Void in
-            make.center.equalTo(walletView)
-            make.height.equalTo(200)
-            make.width.equalTo(190)}
-        scan.snp.remakeConstraints { (make) -> Void in
-            make.center.equalTo(scanView)
-            make.height.equalTo(160)
-            make.width.equalTo(160)}
-        transactions.snp.remakeConstraints { (make) -> Void in
-            make.center.equalTo(transferView)
-            make.width.equalTo(180)
-            make.height.equalTo(180)}
-        clearall()
-        transactions.isHidden = false
-        piggybank.isHidden = false
-        scan.isHidden = false
-        walletView.isHidden = false
-        scanView.isHidden = false
-        transferView.isHidden = false
-    }
-    private func walletPage()
-    {
-        walletView.snp.remakeConstraints { (make) -> Void in
-            make.top.left.right.bottom.equalTo(0)}
-        clearall()
-        backButton.isHidden = false
-        walletView.isHidden = false
-    }
-    private func scanPage()
-    {
-        scanView.snp.remakeConstraints { (make) -> Void in
-            make.top.left.right.bottom.equalTo(0)}
-        clearall()
-        scanView.isHidden = false
-        backButton.isHidden = false
-    }
-    private func transferPage()
-    {
-        transferView.snp.remakeConstraints { (make) -> Void in
-            make.top.left.right.bottom.equalTo(0)}
-        clearall()
-        transferView.isHidden = false
-        backButton.isHidden = false
-    }
-
-    func refreshView()
+    func welcomePage()
     {
         walletView.backgroundColor = UIColor.gray
         scanView.backgroundColor = UIColor.darkGray
-        transferView.backgroundColor = UIColor.lightGray
-        UIView.animate(withDuration: 0.5)
+        transactionsView.backgroundColor = UIColor.lightGray
+
+        self.refreshView()
+    }
+    func refreshView()
+    {
+        UIView.animate(withDuration: 0.3)
         {
-            switch self.currentView {
-            case "wallet":
-                self.walletPage()
-            case "scan":
-                self.scanPage()
-            case "transfers":
-                self.transferPage()
-            default:
-                self.welcomePage()}
-            self.walletView.superview?.layoutIfNeeded()
+            if self.currentView != nil
+            {
+                self.backButton.isHidden = false
+                self.walletView.goBackground()
+                self.transactionsView.goBackground()
+                self.scanView.goBackground()
+                self.currentView!.goForeground()
+            }
+            else
+            {
+                self.backButton.isHidden = true
+                self.walletView.goMenu()
+                self.transactionsView.goMenu()
+                self.scanView.goMenu()
+            }
+            self.view.layoutIfNeeded()
         }
     }
 }

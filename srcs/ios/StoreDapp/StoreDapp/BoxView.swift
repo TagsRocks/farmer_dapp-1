@@ -11,18 +11,16 @@ import SnapKit
 
 class BoxView: UIView, UIGestureRecognizerDelegate
 {
-    var id :String? = nil
     var delegate :MainViewController? = nil
     override init(frame: CGRect){super.init(frame: frame)}
     required init?(coder aDecoder: NSCoder){super.init(coder: aDecoder)}
-    convenience init(givenId :String? = nil)
+    convenience init()
     {
         self.init(frame: CGRect.zero)
-        self.construct(givenId: givenId)
+        self.construct()
     }
-    func construct(givenId :String? = nil)
+    func construct()
     {
-        self.id = givenId!
         self.snp.makeConstraints { (make) -> Void in
             make.size.equalTo(self.frame.size)}
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)));
@@ -30,7 +28,11 @@ class BoxView: UIView, UIGestureRecognizerDelegate
     }
     @objc func handleTap(sender: UITapGestureRecognizer? = nil)
     {
-        self.delegate!.currentView = self.id!
+        self.delegate!.currentView = self
         self.delegate?.refreshView()
     }
+
+    func goBackground() {self.layer.zPosition = 2}
+    func goForeground() {self.layer.zPosition = 42}
+    func goMenu()       {}
 }

@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		B4F7C516EB32AC7E01D992E1 /* Pods_StoreDapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8635C4AF1EC7736CE0310487 /* Pods_StoreDapp.framework */; };
-		DA5E75801F878796000EB5DF /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E757F1F878796000EB5DF /* BackButtonView.swift */; };
+		DA5E75821F87AF0D000EB5DF /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E75811F87AF0D000EB5DF /* Wallet.swift */; };
+		DA5E75841F87C80B000EB5DF /* Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E75831F87C80B000EB5DF /* Transactions.swift */; };
+		DA5E75861F87C842000EB5DF /* Scan.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E75851F87C842000EB5DF /* Scan.swift */; };
 		DA9D904B1F83811D0028B3A1 /* web3.js in Resources */ = {isa = PBXBuildFile; fileRef = DA9D90491F83811D0028B3A1 /* web3.js */; };
-		DA9D904C1F83811D0028B3A1 /* web3.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9D904A1F83811D0028B3A1 /* web3.swift */; };
+		DA9D904C1F83811D0028B3A1 /* Web3.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9D904A1F83811D0028B3A1 /* Web3.swift */; };
 		DA9D904E1F83D6CD0028B3A1 /* BoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9D904D1F83D6CD0028B3A1 /* BoxView.swift */; };
 		DA9D90561F83E2350028B3A1 /* Geth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9D90551F83E2350028B3A1 /* Geth.framework */; };
 		DA9FEFA71F837E240043B07A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9FEFA61F837E240043B07A /* AppDelegate.swift */; };
@@ -41,9 +43,11 @@
 		0405C32DD4FDC655039FB904 /* Pods-StoreDapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoreDapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-StoreDapp/Pods-StoreDapp.release.xcconfig"; sourceTree = "<group>"; };
 		8635C4AF1EC7736CE0310487 /* Pods_StoreDapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoreDapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98A59E3EB6B81449276EECB6 /* Pods-StoreDapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoreDapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StoreDapp/Pods-StoreDapp.debug.xcconfig"; sourceTree = "<group>"; };
-		DA5E757F1F878796000EB5DF /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
+		DA5E75811F87AF0D000EB5DF /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
+		DA5E75831F87C80B000EB5DF /* Transactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transactions.swift; sourceTree = "<group>"; };
+		DA5E75851F87C842000EB5DF /* Scan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scan.swift; sourceTree = "<group>"; };
 		DA9D90491F83811D0028B3A1 /* web3.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = web3.js; sourceTree = "<group>"; };
-		DA9D904A1F83811D0028B3A1 /* web3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = web3.swift; sourceTree = "<group>"; };
+		DA9D904A1F83811D0028B3A1 /* Web3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web3.swift; sourceTree = "<group>"; };
 		DA9D904D1F83D6CD0028B3A1 /* BoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxView.swift; sourceTree = "<group>"; };
 		DA9D90511F83DE9D0028B3A1 /* Geth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Geth.framework; path = "../../../../../../Downloads/geth-ios-all-1.7.0-6c6c7b2a/Geth.framework"; sourceTree = "<group>"; };
 		DA9D90531F83E2230028B3A1 /* bin */ = {isa = PBXFileReference; lastKnownFileType = folder; name = bin; path = "../../../../../../Downloads/go-ethereum-1.7.0/build/bin"; sourceTree = "<group>"; };
@@ -136,8 +140,10 @@
 				DA9FEFA61F837E240043B07A /* AppDelegate.swift */,
 				DA9FEFA81F837E240043B07A /* ViewController.swift */,
 				DA9D904D1F83D6CD0028B3A1 /* BoxView.swift */,
-				DA5E757F1F878796000EB5DF /* BackButtonView.swift */,
-				DA9D904A1F83811D0028B3A1 /* web3.swift */,
+				DA5E75811F87AF0D000EB5DF /* Wallet.swift */,
+				DA5E75831F87C80B000EB5DF /* Transactions.swift */,
+				DA5E75851F87C842000EB5DF /* Scan.swift */,
+				DA9D904A1F83811D0028B3A1 /* Web3.swift */,
 				DA9D90491F83811D0028B3A1 /* web3.js */,
 				DA9FEFAD1F837E240043B07A /* Assets.xcassets */,
 				DA9FEFB21F837E240043B07A /* Info.plist */,
@@ -353,11 +359,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA5E75821F87AF0D000EB5DF /* Wallet.swift in Sources */,
 				DA9FEFA91F837E240043B07A /* ViewController.swift in Sources */,
-				DA9D904C1F83811D0028B3A1 /* web3.swift in Sources */,
+				DA5E75861F87C842000EB5DF /* Scan.swift in Sources */,
+				DA5E75841F87C80B000EB5DF /* Transactions.swift in Sources */,
+				DA9D904C1F83811D0028B3A1 /* Web3.swift in Sources */,
 				DA9D904E1F83D6CD0028B3A1 /* BoxView.swift in Sources */,
 				DA9FEFA71F837E240043B07A /* AppDelegate.swift in Sources */,
-				DA5E75801F878796000EB5DF /* BackButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
