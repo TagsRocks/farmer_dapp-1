@@ -43,7 +43,7 @@ class MainViewController: UIViewController
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(sender:)));
         backButton.addGestureRecognizer(tapGesture)
         backButton.snp.makeConstraints { (make) -> Void in
-            make.top.equalTo(10)
+            make.top.equalTo(17)
             make.left.equalTo(0)
             make.height.equalTo(60)
             make.width.equalTo(60)}

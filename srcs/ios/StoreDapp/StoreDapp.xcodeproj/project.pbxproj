@@ -11,7 +11,6 @@
 		DA5E75821F87AF0D000EB5DF /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E75811F87AF0D000EB5DF /* Wallet.swift */; };
 		DA5E75841F87C80B000EB5DF /* Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E75831F87C80B000EB5DF /* Transactions.swift */; };
 		DA5E75861F87C842000EB5DF /* Scan.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E75851F87C842000EB5DF /* Scan.swift */; };
-		DA9D904B1F83811D0028B3A1 /* web3.js in Resources */ = {isa = PBXBuildFile; fileRef = DA9D90491F83811D0028B3A1 /* web3.js */; };
 		DA9D904C1F83811D0028B3A1 /* Web3.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9D904A1F83811D0028B3A1 /* Web3.swift */; };
 		DA9D904E1F83D6CD0028B3A1 /* BoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9D904D1F83D6CD0028B3A1 /* BoxView.swift */; };
 		DA9D90561F83E2350028B3A1 /* Geth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9D90551F83E2350028B3A1 /* Geth.framework */; };
@@ -46,7 +45,6 @@
 		DA5E75811F87AF0D000EB5DF /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		DA5E75831F87C80B000EB5DF /* Transactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transactions.swift; sourceTree = "<group>"; };
 		DA5E75851F87C842000EB5DF /* Scan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scan.swift; sourceTree = "<group>"; };
-		DA9D90491F83811D0028B3A1 /* web3.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = web3.js; sourceTree = "<group>"; };
 		DA9D904A1F83811D0028B3A1 /* Web3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web3.swift; sourceTree = "<group>"; };
 		DA9D904D1F83D6CD0028B3A1 /* BoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxView.swift; sourceTree = "<group>"; };
 		DA9D90511F83DE9D0028B3A1 /* Geth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Geth.framework; path = "../../../../../../Downloads/geth-ios-all-1.7.0-6c6c7b2a/Geth.framework"; sourceTree = "<group>"; };
@@ -144,7 +142,6 @@
 				DA5E75831F87C80B000EB5DF /* Transactions.swift */,
 				DA5E75851F87C842000EB5DF /* Scan.swift */,
 				DA9D904A1F83811D0028B3A1 /* Web3.swift */,
-				DA9D90491F83811D0028B3A1 /* web3.js */,
 				DA9FEFAD1F837E240043B07A /* Assets.xcassets */,
 				DA9FEFB21F837E240043B07A /* Info.plist */,
 			);
@@ -280,7 +277,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA9FEFAE1F837E240043B07A /* Assets.xcassets in Resources */,
-				DA9D904B1F83811D0028B3A1 /* web3.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@ import SnapKit
 class BoxView: UIView, UIGestureRecognizerDelegate
 {
     var delegate :MainViewController? = nil
+    var isBackground :Bool = false
     override init(frame: CGRect){super.init(frame: frame)}
     required init?(coder aDecoder: NSCoder){super.init(coder: aDecoder)}
     convenience init()
@@ -28,11 +29,14 @@ class BoxView: UIView, UIGestureRecognizerDelegate
     }
     @objc func handleTap(sender: UITapGestureRecognizer? = nil)
     {
-        self.delegate!.currentView = self
-        self.delegate?.refreshView()
+        if (self.isBackground == false)
+        {
+            self.delegate!.currentView = self
+            self.delegate?.refreshView()
+        }
     }
 
-    func goBackground() {self.layer.zPosition = 2}
-    func goForeground() {self.layer.zPosition = 42}
-    func goMenu()       {}
+    func goBackground() {self.layer.zPosition = 2; self.isBackground = true}
+    func goForeground() {self.layer.zPosition = 42; self.isBackground = false}
+    func goMenu()       {self.isBackground = false}
 }

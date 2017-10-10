@@ -13,8 +13,30 @@ import Geth
 class Web3
 {
     var coinBase:String? = nil
-    
+
     init() {self.coinBase = getCoinbase()}
+
+//    func test()
+//    {
+//        var text = ""
+//
+//        let datadir = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as NSArray).firstObject as! String
+//        let am = GoGethNewAccountManager(datadir + "/keystore2", GoGethStandardScryptN, GoGethStandardScryptP)
+//
+//        var newAcc: GoGethAccount?; try! am.newAccount("Creation password", ret0_: &newAcc)
+//        text = text + "JSON: " + (NSString(data: jsonKey!, encoding: NSUTF8StringEncoding) as! String) + "\n"
+//
+//        try! am.deleteAccount(newAcc!, passphrase: "Creation password")
+//        text = text + "Accs: " + String(am.getAccounts().size()) + "\n"
+//
+//        var impAcc: GoGethAccount?; try! am.importKey(jsonKey, passphrase: "Export password", newPassphrase: "Import password", ret0_: &impAcc)
+//        text = text + "Imp: " + impAcc!.getAddress().getHex()
+//
+//        print ("OUTPUT --[\(text)]--")
+//    }
+
+
+
     private func    getCoinbase() -> String?
     {
         let jsSource = """
