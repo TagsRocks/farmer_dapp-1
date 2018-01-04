@@ -1,4 +1,6 @@
-# Farmer_dapp
+# Farmer_dapp (DEPRECATED)
+
+**DEPRECATED: Please take a look at the [CoinGemini repo](https://github.com/Capgemini-AIE/CoinGemini.git) instead. **
 
 A decentralized app for farmers to sell their products
 
@@ -9,7 +11,7 @@ A decentralized app for farmers to sell their products
 
 ## Installation
 ```
-git clone https://github.com/grumbach/farmer_dapp.git && cd farmer_dapp/scripts && ./setup.bash
+git clone https://github.com/Capgemini-AIE/farmer_dapp.git && cd farmer_dapp/scripts && ./setup.bash
 ```
 
 ## Run
